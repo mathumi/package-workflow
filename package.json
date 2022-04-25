@@ -1,0 +1,19 @@
+{
+  "name": "package-workflow-sample",
+  "version": "1.0.0",
+  "description": "Git Workflow Samples",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathumi/package-workflow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathumi/package-workflow/issues"
+  },
+  "homepage": "https://github.com/mathumi/package-workflow#readme"
+}
