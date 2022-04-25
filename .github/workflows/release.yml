@@ -22,5 +22,6 @@ jobs:
         run: npm version patch && npm publish
       - name: Push changes
         run: |
-          git commit -am "Publish"
+          git add .
+          git commit -m "Publish"
           git push
