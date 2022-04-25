@@ -3,6 +3,8 @@ on: [workflow_dispatch]
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+        NPM_PERSONAL_TOKEN: ${{ secrets.NPM_PERSONAL_TOKEN }}
     steps:
       - name: Checkout
         uses: actions/checkout@v2
@@ -18,8 +20,6 @@ jobs:
           git config --global user.email 'mathumi@users.noreply.github.com'
       - name: Publish package on NPM 📦
         run: npm version patch && npm publish
-        env:
-          NPM_PERSONAL_TOKEN: ${{ secrets.NPM_PERSONAL_TOKEN }}
       - name: Push changes
         run: |
           git commit -am "Publish"
