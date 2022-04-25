@@ -13,11 +13,13 @@ jobs:
           registry-url: 'https://registry.npmjs.org'
       - name: Install dependencies and build 🔧
         run: npm install
+      - name: Update Git Credentials
+        run: |
+          git config --global user.name 'mathumi'
+          git config --global user.email 'mathumi@users.noreply.github.com'
       - name: Publish package on NPM 📦
         run: npm version patch && npm publish
       - name: Push changes
         run: |
-          git config --global user.name 'mathumi'
-          git config --global user.email 'mathumi@users.noreply.github.com'
           git commit -am "Publish"
           git push
